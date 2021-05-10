@@ -1,6 +1,6 @@
 /*   The Sonic Pi Techno Machine - By Mehackit                                          *
  *   If you have any questions / feedback about it, please contact tommi@mehackit.org   */
-//Additions added by Robin Newman to zero Sequencer (T), clear drums (G) and clear all (G)
+//Additions added by Robin Newman to zero Sequencer (T), clear drums (G) and clear all (G) Also updated to port 4560
 
 import oscP5.*;                   // Please install OscP5 and ControlP5 libraries from
 import netP5.*;                   // the menu Sketch / Import Library / Add Library... 
@@ -34,7 +34,7 @@ void setup() {
   smooth();    
   
   oscP5 = new OscP5(this, 8000);                  // Initializing this processing to listen to OSC messages
-  sonicPi = new NetAddress("127.0.0.1",4559);     // and send them locally to Sonic Pi using port 4559 
+  sonicPi = new NetAddress("127.0.0.1",4560);     // and send them locally to Sonic Pi using port 4560 
   
   logo = loadShape("data/mehackit.obj");          // Loads the 3D Mehackit logo shape
   logo.disableStyle();
